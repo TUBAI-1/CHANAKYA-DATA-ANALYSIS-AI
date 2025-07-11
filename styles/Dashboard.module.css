@@ -1,0 +1,136 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a2e; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.metricCard {
+  background-color: #16213e; /* Slightly lighter dark card background */
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.metricIcon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-bottom: 0.2rem;
+}
+
+.metricValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.dataSummary {
+  background-color: #16213e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dataSummary h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.dataSummary p {
+  margin-bottom: 0.5rem;
+  color: #a0a0a0;
+}
+
+.generateButton {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #533483; /* Accent color 2 */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.generateButton:hover {
+  background-color: #e94560; /* Hover accent color */
+}
+
+.buttonIcon {
+  font-size: 1.2rem;
+}
+
+.bottomNav {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.8rem 0;
+  background-color: #16213e;
+  border-top: 1px solid #0f3460;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #a0a0a0;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.navItem:hover,
+.navItem.active {
+  color: #e94560; /* Accent color 1 for active/hover */
+}
+
+.navIcon {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.navLabel {
+  font-size: 0.75rem;
+}

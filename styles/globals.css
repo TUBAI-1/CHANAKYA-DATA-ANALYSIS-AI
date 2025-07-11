@@ -1,0 +1,31 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #1a1a2e; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Violet accents */
+.violet-accent {
+  color: #a0a0ff; /* Light violet for accents */
+}
+
+.bg-violet-accent {
+  background-color: #a0a0ff; /* Light violet background for accents */
+}
+
+.border-violet-accent {
+  border-color: #a0a0ff; /* Light violet border for accents */
+}
