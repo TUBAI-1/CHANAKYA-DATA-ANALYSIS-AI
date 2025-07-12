@@ -67,8 +67,10 @@ export default function Spreadsheet() {
   }, [selectedCell, inputValue, gridData]);
 
   const handleOpenAIAssistant = () => {
-    localStorage.setItem('spreadsheetData', JSON.stringify(gridData));
-    window.location.href = '/ai-assistant';
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('spreadsheetData', JSON.stringify(gridData));
+      window.location.href = '/ai-assistant';
+    }
   };
 
   const Cell = useCallback(({ rowIndex, columnIndex, style }) => {
@@ -143,7 +145,7 @@ export default function Spreadsheet() {
               <FixedSizeGrid
                 columnCount={1}
                 columnWidth={50}
-                height={window.innerHeight - 280} // Adjust height as needed
+                height={typeof window !== 'undefined' ? window.innerHeight - 280 : 500} // Adjust height as needed
                 rowCount={NUM_ROWS}
                 rowHeight={ROW_HEIGHT}
                 width={50}
@@ -159,17 +161,17 @@ export default function Spreadsheet() {
                 height={ROW_HEIGHT} // Height of a single row for column headers
                 rowCount={1}
                 rowHeight={ROW_HEIGHT}
-                width={window.innerWidth - 100} // Adjust as needed
+                width={typeof window !== 'undefined' ? window.innerWidth - 100 : 800} // Adjust as needed
               >
                 {ColumnHeader}
               </FixedSizeGrid>
               <FixedSizeGrid
                 columnCount={NUM_COLUMNS}
                 columnWidth={COLUMN_WIDTH}
-                height={window.innerHeight - 280 - ROW_HEIGHT} // Adjust height as needed
+                height={typeof window !== 'undefined' ? window.innerHeight - 280 - ROW_HEIGHT : 500 - ROW_HEIGHT} // Adjust height as needed
                 rowCount={NUM_ROWS}
                 rowHeight={ROW_HEIGHT}
-                width={window.innerWidth - 100} // Adjust as needed
+                width={typeof window !== 'undefined' ? window.innerWidth - 100 : 800} // Adjust as needed
                 ref={gridRef}
                 onScroll={({ scrollLeft, scrollTop }) => {
                   if (rowHeaderRef.current) {
